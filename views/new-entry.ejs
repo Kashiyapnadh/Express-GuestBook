@@ -1,0 +1,43 @@
+<%- include('header') %>
+
+<main class="new-entry-container d-flex justify-content-center align-items-start mt-5">
+    <div class="card border rounded shadow-sm p-4" style="max-width: 600px; width: 100%;">
+        <h2 class="page-title mb-4 text-center">Write a New Entry</h2>
+        
+        <form class="entry-form" role="form" method="post">
+            <div class="form-group mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input 
+                    type="text" 
+                    id="title" 
+                    name="title" 
+                    placeholder="Enter title" 
+                    required 
+                    class="form-control"
+                >
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="body" class="form-label">Enter description</label>
+                <textarea 
+                    id="body" 
+                    name="body" 
+                    placeholder="Love Express! It's a great tool to have." 
+                    rows="3" 
+                    required 
+                    class="form-control"
+                ></textarea>
+            </div>
+
+            <div class="form-group text-center">
+                <input 
+                    type="submit" 
+                    value="Post entry" 
+                    class="btn btn-primary px-4"
+                >
+            </div>
+        </form>
+    </div>
+</main>
+
+<%- include('footer') %>

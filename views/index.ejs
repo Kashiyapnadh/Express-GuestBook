@@ -1,0 +1,24 @@
+<%- include('header') %>
+
+<main class="entries-container">
+    <% if(entries.length) { %>
+        <% entries.forEach(function(entry){ %>
+            <div class="card border rounded mb-3 shadow-sm">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h2 class="entry-title m-0"><%= entry.title %></h2>
+        <time class="text-muted"><%= entry.published %></time>
+    </div>
+    <div class="card-body">
+        <p><%= entry.content %></p>
+    </div>
+</div>
+
+        <% }) %>
+    <% } else { %>
+        <p class="no-entries">
+            No entries! <a href="/new-entry" class="add-entry-link">Add one</a>
+        </p>
+    <% }  %>
+</main>
+
+<%- include('footer') %>
